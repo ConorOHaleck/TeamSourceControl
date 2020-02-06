@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AOEContext.cs" />
+    <Compile Include="AOEDBInitializer.cs" />
     <Compile Include="Army.cs" />
     <Compile Include="ArmySoldier.cs" />
     <Compile Include="Form1.cs">
