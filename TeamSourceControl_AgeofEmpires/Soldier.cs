@@ -8,14 +8,26 @@ namespace TeamSourceControl_AgeofEmpires
 {
     class Soldier
     {
-        public int SoldierID { get; set; }
+        public Int16 SoldierID { get; set; }
+        public String SoldierName { get; set; }
         public Boolean isRanged { get; set; }
-        public int HPMax { get; set; }
-        public int RateOfFire { get; set; }
-        public int Attack { get; set; }
-        public int MArmor { get; set; }
-        public int RArmor { get; set; }
+        public byte HPMax { get; set; }
+        public double RateOfFire { get; set; }
+        public byte Attack { get; set; }
+        public byte MArmor { get; set; }
+        public byte RArmor { get; set; }
 
         public ICollection<ArmySoldier> ArmySoldiers { get; set; }
+       
+        public Soldier( String Name, Boolean isRanged, byte HPMax, double RateOfFire, byte Attack, byte MArmor, byte RArmor )
+        {
+            this.SoldierName = Name;
+            this.isRanged = isRanged;
+            this.HPMax = HPMax;
+            this.RateOfFire = RateOfFire;
+            this.Attack = Attack;
+            this.MArmor = MArmor;
+            this.RArmor = RArmor;
+        }
     }
 }
