@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamSourceControl_AgeofEmpires
 {
-    class SoldierDb
+    public static class SoldierDb
     {
         /// <summary>
         /// Returns a list of all the soldiers

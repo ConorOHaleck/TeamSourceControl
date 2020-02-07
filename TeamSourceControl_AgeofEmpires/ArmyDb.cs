@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamSourceControl_AgeofEmpires
 {
-    class ArmyDb
+    public static class ArmyDb
     {
         /// <summary>
         /// Returns a list of all the armies
