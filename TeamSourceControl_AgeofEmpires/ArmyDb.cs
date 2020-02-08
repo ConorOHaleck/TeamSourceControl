@@ -22,6 +22,10 @@ namespace TeamSourceControl_AgeofEmpires
             return armies;
         }
 
+        /// <summary>
+        /// Adds an army to the database
+        /// </summary>
+        /// <param name="army"></param>
         public static Army Add(Army army)
         {
             AOEContext context = new AOEContext();
@@ -31,6 +35,10 @@ namespace TeamSourceControl_AgeofEmpires
             return army;
         }
 
+        /// <summary>
+        /// Updates all army data except for PK
+        /// </summary>
+        /// <param name="a"></param>
         public static Army Update(Army a)
         {
             using (AOEContext context = new AOEContext())
@@ -42,6 +50,10 @@ namespace TeamSourceControl_AgeofEmpires
             }
         }
 
+        /// <summary>
+        /// Deletes an army from the database by ArmyId
+        /// </summary>
+        /// <param name="a"></param>
         public static void Delete(Army a)
         {
             using(AOEContext context = new AOEContext())

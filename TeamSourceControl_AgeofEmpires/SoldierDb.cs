@@ -22,6 +22,10 @@ namespace TeamSourceControl_AgeofEmpires
             return soldiers;
         }
 
+        /// <summary>
+        /// Adds a soldier to the database
+        /// </summary>
+        /// <param name="soldier"></param>
         public static Soldier Add(Soldier soldier)
         {
             AOEContext context = new AOEContext();
@@ -31,6 +35,10 @@ namespace TeamSourceControl_AgeofEmpires
             return soldier;
         }
 
+        /// <summary>
+        /// Updates all soldier data except PK
+        /// </summary>
+        /// <param name="s"></param>
         public static Soldier Update(Soldier s)
         {
             using(AOEContext context = new AOEContext())
@@ -42,6 +50,10 @@ namespace TeamSourceControl_AgeofEmpires
             }
         }
 
+        /// <summary>
+        /// Deletes a soldier from the database by SoldierId
+        /// </summary>
+        /// <param name="s"></param>
         public static void Delete(Soldier s)
         {
             using (AOEContext context = new AOEContext())
