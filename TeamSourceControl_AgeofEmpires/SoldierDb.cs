@@ -20,5 +20,14 @@ namespace TeamSourceControl_AgeofEmpires
 
             return soldiers;
         }
+
+        public static Soldier Add(Soldier soldier)
+        {
+            AOEContext context = new AOEContext();
+            context.Soldiers.Add(soldier);
+            context.SaveChanges();
+
+            return soldier;
+        }
     }
 }
