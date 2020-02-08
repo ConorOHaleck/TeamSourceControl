@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,17 @@ namespace TeamSourceControl_AgeofEmpires
             context.SaveChanges();
 
             return soldier;
+        }
+
+        public static Soldier Update(Soldier s)
+        {
+            using(AOEContext context = new AOEContext())
+            {
+                context.Soldiers.Attach(s);
+                context.Entry(s).State = EntityState.Modified;
+                context.SaveChanges();
+                return s;
+            }
         }
     }
 }
