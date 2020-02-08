@@ -20,5 +20,14 @@ namespace TeamSourceControl_AgeofEmpires
 
             return armies;
         }
+
+        public static Army Add(Army army)
+        {
+            AOEContext context = new AOEContext();
+            context.Armies.Add(army);
+            context.SaveChanges();
+
+            return army;
+        }
     }
 }
