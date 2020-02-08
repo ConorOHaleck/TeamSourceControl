@@ -41,5 +41,15 @@ namespace TeamSourceControl_AgeofEmpires
                 return s;
             }
         }
+
+        public static void Delete(Soldier s)
+        {
+            using (AOEContext context = new AOEContext())
+            {
+                context.Soldiers.Attach(s);
+                context.Entry(s).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
     }
 }
