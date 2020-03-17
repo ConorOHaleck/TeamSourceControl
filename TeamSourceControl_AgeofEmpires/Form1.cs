@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TeamSourceControl_AgeofEmpires
 {
-    public partial class Form1 : Form
+    public partial class frmEditArmies : Form
     {
-        public Form1()
+        public frmEditArmies()
         {
             InitializeComponent();
+        }
+
+        private void btnAddArmy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
