@@ -16,7 +16,7 @@ namespace TeamSourceControl_AgeofEmpires
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEditArmies());
+            Application.Run(new frmArmies());
         }
     }
 }
