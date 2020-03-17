@@ -26,6 +26,33 @@ namespace TeamSourceControl_AgeofEmpires
 
             ArmyDb.Add(army);
             MessageBox.Show($"{army.ArmyName} added");
+            UpdateComboBox();
+        }
+
+        private void FrmArmies_Load(object sender, EventArgs e)
+        {
+            UpdateComboBox();
+        }
+
+        private void UpdateComboBox()
+        {
+            cbArmies.Items.Clear();
+
+            List<Army> allArmies = ArmyDb.GetAllArmies();
+
+            if (allArmies.Count > 0)
+            {
+                cbArmies.Enabled = true;
+
+                for (int i = 0; i < allArmies.Count; i++)
+                {
+                    cbArmies.Items.Add(allArmies[i].ArmyName);
+                }
+            }
+            else
+            {
+                cbArmies.Enabled = false;
+            }
         }
     }
 }

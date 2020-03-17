@@ -112,6 +112,7 @@
             this.Controls.Add(this.cbArmies);
             this.Name = "frmArmies";
             this.Text = "Armies";
+            this.Load += new System.EventHandler(this.FrmArmies_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
