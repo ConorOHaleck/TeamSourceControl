@@ -54,5 +54,20 @@ namespace TeamSourceControl_AgeofEmpires
                 cbArmies.Enabled = false;
             }
         }
+
+        private void BtnDeleteArmy_Click(object sender, EventArgs e)
+        {
+            if (cbArmies.SelectedItem != null)
+            {
+                if (MessageBox.Show("Do you really want to delete this army?","Message",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    // ArmyDb.Delete(cbArmies.SelectedItem);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an army.");
+            }
+        }
     }
 }

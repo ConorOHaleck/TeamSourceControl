@@ -39,11 +39,13 @@
             // 
             // cbArmies
             // 
+            this.cbArmies.DisplayMember = "Null";
             this.cbArmies.FormattingEnabled = true;
             this.cbArmies.Location = new System.Drawing.Point(147, 163);
             this.cbArmies.Name = "cbArmies";
             this.cbArmies.Size = new System.Drawing.Size(121, 21);
             this.cbArmies.TabIndex = 4;
+            this.cbArmies.ValueMember = "Null";
             // 
             // allArmies
             // 
@@ -81,6 +83,7 @@
             this.btnDeleteArmy.TabIndex = 6;
             this.btnDeleteArmy.Text = "Delete Army";
             this.btnDeleteArmy.UseVisualStyleBackColor = true;
+            this.btnDeleteArmy.Click += new System.EventHandler(this.BtnDeleteArmy_Click);
             // 
             // addArmyName
             // 
