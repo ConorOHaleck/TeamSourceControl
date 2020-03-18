@@ -32,6 +32,7 @@ namespace TeamSourceControl_AgeofEmpires
         private void FrmArmies_Load(object sender, EventArgs e)
         {
             UpdateComboBox();
+            UpdateButtons();
         }
 
         private void UpdateComboBox()
@@ -53,6 +54,38 @@ namespace TeamSourceControl_AgeofEmpires
             {
                 cbArmies.Enabled = false;
             }
+        }
+
+        private void BtnEditArmy_Click(object sender, EventArgs e)
+        {
+            frmEditArmy editArmyForm = new frmEditArmy(cbArmies.SelectedItem);
+            editArmyForm.ShowDialog();
+        }
+
+        private void UpdateButtons()
+        {
+            if (isArmySelected() == true)
+            {
+                btnEditArmy.Enabled = true;
+            }
+            else
+            {
+                btnEditArmy.Enabled = false;
+            }
+        }
+
+        private bool isArmySelected()
+        {
+            if(cbArmies.SelectedItem != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void CbArmies_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateButtons();
         }
     }
 }

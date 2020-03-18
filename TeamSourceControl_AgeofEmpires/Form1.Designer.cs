@@ -44,6 +44,7 @@
             this.cbArmies.Name = "cbArmies";
             this.cbArmies.Size = new System.Drawing.Size(121, 21);
             this.cbArmies.TabIndex = 4;
+            this.cbArmies.SelectedIndexChanged += new System.EventHandler(this.CbArmies_SelectedIndexChanged);
             // 
             // allArmies
             // 
@@ -62,6 +63,7 @@
             this.btnEditArmy.TabIndex = 5;
             this.btnEditArmy.Text = "Edit Army";
             this.btnEditArmy.UseVisualStyleBackColor = true;
+            this.btnEditArmy.Click += new System.EventHandler(this.BtnEditArmy_Click);
             // 
             // btnAddArmy
             // 
@@ -102,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 340);
+            this.ClientSize = new System.Drawing.Size(598, 340);
             this.Controls.Add(this.txtAddArmy);
             this.Controls.Add(this.addArmyName);
             this.Controls.Add(this.btnDeleteArmy);
