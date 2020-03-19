@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace TeamSourceControl_AgeofEmpires
 {
-    class Army
+    public class Army
     {
         public int ArmyID { get; set; }
-        public int MyProperty { get; set; }
         public String ArmyName { get; set; }
         public String ArmyOwner { get; set; }
 
-        public ICollection<ArmySoldier> ArmySoldiers { get; set; }
+        public ICollection<ArmySoldier> Soldiers { get; set; }
     }
 }

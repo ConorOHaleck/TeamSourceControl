@@ -14,7 +14,6 @@ namespace TeamSourceControl_AgeofEmpires
             Database.SetInitializer(new AOEDBInitializer()); //Seeds the database with default data (especially soldiers)
         }
         public DbSet<Army> Armies { get; set; }
-        public DbSet<ArmySoldier> ArmySoldiers { get; set; }
         public DbSet<Soldier> Soldiers { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamSourceControl_AgeofEmpires
 {
-    class Soldier
+    public class Soldier
     {
         public Int16 SoldierID { get; set; }
         public String SoldierName { get; set; }
@@ -17,7 +17,7 @@ namespace TeamSourceControl_AgeofEmpires
         public byte MArmor { get; set; }
         public byte RArmor { get; set; }
 
-        public ICollection<ArmySoldier> ArmySoldiers { get; set; }
+        public ICollection<ArmySoldier> Armies { get; set; }
        
         public Soldier( String Name, Boolean isRanged, byte HPMax, double RateOfFire, byte Attack, byte MArmor, byte RArmor )
         {
@@ -28,6 +28,11 @@ namespace TeamSourceControl_AgeofEmpires
             this.Attack = Attack;
             this.MArmor = MArmor;
             this.RArmor = RArmor;
+        }
+
+        public override string ToString()
+        {
+            return SoldierName;
         }
     }
 }
