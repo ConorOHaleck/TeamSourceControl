@@ -62,7 +62,6 @@
     <Compile Include="AOEDBInitializer.cs" />
     <Compile Include="Army.cs" />
     <Compile Include="ArmyDb.cs" />
-    <Compile Include="ArmySoldier.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

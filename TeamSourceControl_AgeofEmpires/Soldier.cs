@@ -17,7 +17,7 @@ namespace TeamSourceControl_AgeofEmpires
         public byte MArmor { get; set; }
         public byte RArmor { get; set; }
 
-        public ICollection<ArmySoldier> Armies { get; set; }
+        public ICollection<Army> Armies { get; set; }
        
         public Soldier( String Name, Boolean isRanged, byte HPMax, double RateOfFire, byte Attack, byte MArmor, byte RArmor )
         {

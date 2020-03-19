@@ -12,6 +12,6 @@ namespace TeamSourceControl_AgeofEmpires
         public String ArmyName { get; set; }
         public String ArmyOwner { get; set; }
 
-        public ICollection<ArmySoldier> Soldiers { get; set; }
+        public ICollection<Soldier> Soldiers { get; set; }
     }
 }
