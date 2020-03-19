@@ -54,5 +54,21 @@ namespace TeamSourceControl_AgeofEmpires
                 cbArmies.Enabled = false;
             }
         }
+
+        private void btnDeleteArmy_Click(object sender, EventArgs e)
+        {
+            Army selectedArmy = ArmyDb.GetArmy((string) cbArmies.SelectedItem);
+
+            using (ConfirmDialog dialog = new ConfirmDialog())
+            {
+                dialog.ShowDialog();
+
+                if (dialog.DialogResult == DialogResult.Yes)
+                {
+                    ArmyDb.Delete(selectedArmy);
+                    UpdateComboBox();
+                }
+            }
+        }
     }
 }
