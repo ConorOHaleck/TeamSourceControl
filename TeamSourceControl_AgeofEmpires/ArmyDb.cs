@@ -23,6 +23,18 @@ namespace TeamSourceControl_AgeofEmpires
         }
 
         /// <summary>
+        /// This class allows you to grab an army using its name, which is required in order to pull from list/comboboxes with string names
+        /// </summary>
+        /// <returns>An Army, identified by its name as a string</returns>
+        public static Army GetArmy(string name)
+        {
+            AOEContext context = new AOEContext();
+
+            Army returner = (from a in context.Armies where a.ArmyName == name select a).FirstOrDefault();
+            return returner;
+        }
+
+        /// <summary>
         /// Adds an army to the database
         /// </summary>
         /// <param name="army"></param>

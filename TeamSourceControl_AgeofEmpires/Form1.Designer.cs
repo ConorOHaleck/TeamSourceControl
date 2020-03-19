@@ -40,34 +40,38 @@
             // cbArmies
             // 
             this.cbArmies.FormattingEnabled = true;
-            this.cbArmies.Location = new System.Drawing.Point(147, 163);
+            this.cbArmies.Location = new System.Drawing.Point(220, 251);
+            this.cbArmies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbArmies.Name = "cbArmies";
-            this.cbArmies.Size = new System.Drawing.Size(121, 21);
+            this.cbArmies.Size = new System.Drawing.Size(180, 28);
             this.cbArmies.TabIndex = 4;
             // 
             // allArmies
             // 
             this.allArmies.AutoSize = true;
-            this.allArmies.Location = new System.Drawing.Point(67, 166);
+            this.allArmies.Location = new System.Drawing.Point(100, 255);
+            this.allArmies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.allArmies.Name = "allArmies";
-            this.allArmies.Size = new System.Drawing.Size(66, 13);
+            this.allArmies.Size = new System.Drawing.Size(98, 20);
             this.allArmies.TabIndex = 3;
             this.allArmies.Text = "Select Army:";
             // 
             // btnEditArmy
             // 
-            this.btnEditArmy.Location = new System.Drawing.Point(112, 206);
+            this.btnEditArmy.Location = new System.Drawing.Point(168, 317);
+            this.btnEditArmy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditArmy.Name = "btnEditArmy";
-            this.btnEditArmy.Size = new System.Drawing.Size(111, 32);
+            this.btnEditArmy.Size = new System.Drawing.Size(166, 49);
             this.btnEditArmy.TabIndex = 5;
             this.btnEditArmy.Text = "Edit Army";
             this.btnEditArmy.UseVisualStyleBackColor = true;
             // 
             // btnAddArmy
             // 
-            this.btnAddArmy.Location = new System.Drawing.Point(112, 63);
+            this.btnAddArmy.Location = new System.Drawing.Point(168, 97);
+            this.btnAddArmy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddArmy.Name = "btnAddArmy";
-            this.btnAddArmy.Size = new System.Drawing.Size(111, 32);
+            this.btnAddArmy.Size = new System.Drawing.Size(166, 49);
             this.btnAddArmy.TabIndex = 2;
             this.btnAddArmy.Text = "Add Army";
             this.btnAddArmy.UseVisualStyleBackColor = true;
@@ -75,34 +79,38 @@
             // 
             // btnDeleteArmy
             // 
-            this.btnDeleteArmy.Location = new System.Drawing.Point(112, 259);
+            this.btnDeleteArmy.Location = new System.Drawing.Point(168, 398);
+            this.btnDeleteArmy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteArmy.Name = "btnDeleteArmy";
-            this.btnDeleteArmy.Size = new System.Drawing.Size(111, 32);
+            this.btnDeleteArmy.Size = new System.Drawing.Size(166, 49);
             this.btnDeleteArmy.TabIndex = 6;
             this.btnDeleteArmy.Text = "Delete Army";
             this.btnDeleteArmy.UseVisualStyleBackColor = true;
+            this.btnDeleteArmy.Click += new System.EventHandler(this.btnDeleteArmy_Click);
             // 
             // addArmyName
             // 
             this.addArmyName.AutoSize = true;
-            this.addArmyName.Location = new System.Drawing.Point(67, 27);
+            this.addArmyName.Location = new System.Drawing.Point(100, 42);
+            this.addArmyName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addArmyName.Name = "addArmyName";
-            this.addArmyName.Size = new System.Drawing.Size(67, 13);
+            this.addArmyName.Size = new System.Drawing.Size(99, 20);
             this.addArmyName.TabIndex = 0;
             this.addArmyName.Text = "Army Name: ";
             // 
             // txtAddArmy
             // 
-            this.txtAddArmy.Location = new System.Drawing.Point(147, 24);
+            this.txtAddArmy.Location = new System.Drawing.Point(220, 37);
+            this.txtAddArmy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddArmy.Name = "txtAddArmy";
-            this.txtAddArmy.Size = new System.Drawing.Size(121, 20);
+            this.txtAddArmy.Size = new System.Drawing.Size(180, 26);
             this.txtAddArmy.TabIndex = 1;
             // 
             // frmArmies
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 340);
+            this.ClientSize = new System.Drawing.Size(520, 523);
             this.Controls.Add(this.txtAddArmy);
             this.Controls.Add(this.addArmyName);
             this.Controls.Add(this.btnDeleteArmy);
@@ -110,6 +118,7 @@
             this.Controls.Add(this.btnEditArmy);
             this.Controls.Add(this.allArmies);
             this.Controls.Add(this.cbArmies);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmArmies";
             this.Text = "Armies";
             this.Load += new System.EventHandler(this.FrmArmies_Load);
